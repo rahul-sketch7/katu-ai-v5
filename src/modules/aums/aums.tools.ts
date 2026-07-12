@@ -8,9 +8,8 @@ import * as path from 'path';
 const CACHE_PATH = path.resolve('cache/active_student.json');
 const TIMETABLE_PATH = path.resolve('cache/timetable.json');
 const SYLLABUS_PATH = path.resolve('storage/course_syllabus.json');
-const LOG_FILE_PATH = path.resolve('logs/scraper_exec.log');
 
-// Local scraper fallback paths (will only run if local machine)
+// Local scraper paths
 const SCRAPER_SCRIPT = 'C:\\Users\\rahul\\Documents\\LifeOS-Student\\scraper\\aums_scraper_full.py';
 const PYTHON_PATH = 'C:\\Chackravuham\\python\\python.exe';
 
@@ -48,20 +47,25 @@ export class AumsTools {
   })
   async connectStudent(input: { username: string; password: string }) {
     try {
-      // Ensure the logs directory exists locally on the server
-      const logsDir = path.dirname(LOG_FILE_PATH);
-      if (!fs.existsSync(logsDir)) {
-        fs.mkdirSync(logsDir, { recursive: true });
-      }
-
-      // Check if we are running in a cloud environment where Playwright local script doesn't exist
-      if (!fs.existsSync(SCRAPER_SCRIPT)) {
+      // 1. Detect if we are on the cloud (where Python or Playwright local script doesn't exist)
+      if (!fs.existsSync(SCRAPER_SCRIPT) || !fs.existsSync(PYTHON_PATH)) {
         return {
-          result: "Background scraping is only supported when running the server locally on your PC (since the Python Playwright scraper relies on your local environment). However, you can still view your cached timetable, profile, and grades here!"
+          result: "AUMS live scraping is only supported when running the server locally on your PC (since it needs a browser and Python/Playwright environment). However, your pre-packaged Semester 3 timetable, syllabus, and cached marks are fully available to chat about here!"
         };
       }
 
-      const outStream = fs.openSync(LOG_FILE_PATH, 'a');
+      // 2. Local execution logic (safely handle logs with try/catch to avoid write permission errors)
+      let outStream: any = 'ignore';
+      try {
+        const logFile = path.resolve('logs/scraper_exec.log');
+        const logsDir = path.dirname(logFile);
+        if (!fs.existsSync(logsDir)) {
+          fs.mkdirSync(logsDir, { recursive: true });
+        }
+        outStream = fs.openSync(logFile, 'a');
+      } catch (logErr) {
+        console.warn("Failed to create log file, running scraper without logs.", logErr);
+      }
 
       const child = spawn(PYTHON_PATH, [SCRAPER_SCRIPT, input.username, input.password], {
         detached: true,
@@ -209,7 +213,7 @@ export class AumsTools {
   async getProfile() {
     const data = loadStudentData();
     if (!data || !data.student) {
-      return { result: `No student profile data found. Please run connect_student_tool first to login and scrape AUMS data.` };
+      return { result: `No student profile data found.` };
     }
     return { result: JSON.stringify(data.student, null, 2) };
   }
@@ -226,7 +230,7 @@ export class AumsTools {
   async getMarks() {
     const data = loadStudentData();
     if (!data || !data.marks) {
-      return { result: `No marks data found. Please run connect_student_tool first to login and scrape AUMS data.` };
+      return { result: `No marks data found.` };
     }
     return { result: JSON.stringify(data.marks, null, 2) };
   }
@@ -243,7 +247,7 @@ export class AumsTools {
   async getAttendance() {
     const data = loadStudentData();
     if (!data || !data.attendance) {
-      return { result: `No attendance data found. Please run connect_student_tool first to login and scrape AUMS data.` };
+      return { result: `No attendance data found.` };
     }
     return { result: JSON.stringify(data.attendance, null, 2) };
   }
