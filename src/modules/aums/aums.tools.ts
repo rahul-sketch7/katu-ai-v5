@@ -2,10 +2,14 @@ import { ToolDecorator } from '@nitrostack/core';
 import { z } from 'zod';
 import * as fs from 'fs';
 import { spawn } from 'child_process';
+import * as path from 'path';
 
-const CACHE_PATH = 'C:/Users/rahul/Documents/LifeOS-Student/cache/active_student.json';
-const SYLLABUS_PATH = 'C:/Users/rahul/Documents/LifeOS-Student/storage/course_syllabus.json';
-const TIMETABLE_PATH = 'C:/Users/rahul/Documents/LifeOS-Student/cache/timetable.json';
+// Use relative paths resolving from the root of the project directory
+// This works perfectly both locally AND when deployed to NitroStack Cloud!
+const CACHE_PATH = path.resolve('cache/active_student.json');
+const TIMETABLE_PATH = path.resolve('cache/timetable.json');
+const SYLLABUS_PATH = path.resolve('storage/course_syllabus.json');
+
 const SCRAPER_SCRIPT = 'C:\\Users\\rahul\\Documents\\LifeOS-Student\\scraper\\aums_scraper_full.py';
 const PYTHON_PATH = 'C:\\Chackravuham\\python\\python.exe';
 
@@ -43,11 +47,9 @@ export class AumsTools {
   })
   async connectStudent(input: { username: string; password: string }) {
     try {
-      // Create output log stream to capture stdout/stderr from background script
       const logFile = 'C:\\Users\\rahul\\Documents\\LifeOS-Student\\logs\\scraper_exec.log';
       const outStream = fs.openSync(logFile, 'a');
 
-      // Detached background process with shell=true to resolve Windows path correctly
       const child = spawn(PYTHON_PATH, [SCRAPER_SCRIPT, input.username, input.password], {
         detached: true,
         shell: true,
@@ -78,7 +80,7 @@ export class AumsTools {
   async getTimetable(input: { day?: string; nowOnly?: boolean }) {
     try {
       if (!fs.existsSync(TIMETABLE_PATH)) {
-        return { result: "Timetable database is not initialized." };
+        return { result: `Timetable database is not initialized. Checked path: ${TIMETABLE_PATH}` };
       }
       const db = JSON.parse(fs.readFileSync(TIMETABLE_PATH, 'utf-8'));
       
@@ -167,7 +169,7 @@ export class AumsTools {
   async getSyllabus(input: { courseCode: string }) {
     try {
       if (!fs.existsSync(SYLLABUS_PATH)) {
-        return { result: "Syllabus database is not initialized." };
+        return { result: `Syllabus database is not initialized. Checked path: ${SYLLABUS_PATH}` };
       }
       const raw = fs.readFileSync(SYLLABUS_PATH, 'utf-8');
       const db = JSON.parse(raw);
@@ -195,7 +197,7 @@ export class AumsTools {
   async getProfile() {
     const data = loadStudentData();
     if (!data || !data.student) {
-      return { result: "No student profile data found. Please run connect_student_tool first to login and scrape AUMS data." };
+      return { result: `No student profile data found. Checked path: ${CACHE_PATH}` };
     }
     return { result: JSON.stringify(data.student, null, 2) };
   }
@@ -212,7 +214,7 @@ export class AumsTools {
   async getMarks() {
     const data = loadStudentData();
     if (!data || !data.marks) {
-      return { result: "No marks data found. Please run connect_student_tool first to login and scrape AUMS data." };
+      return { result: `No marks data found. Checked path: ${CACHE_PATH}` };
     }
     return { result: JSON.stringify(data.marks, null, 2) };
   }
@@ -229,7 +231,7 @@ export class AumsTools {
   async getAttendance() {
     const data = loadStudentData();
     if (!data || !data.attendance) {
-      return { result: "No attendance data found. Please run connect_student_tool first to login and scrape AUMS data." };
+      return { result: `No attendance data found. Checked path: ${CACHE_PATH}` };
     }
     return { result: JSON.stringify(data.attendance, null, 2) };
   }

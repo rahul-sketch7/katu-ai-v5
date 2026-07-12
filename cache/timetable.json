@@ -1,0 +1,61 @@
+{
+  "slots": [
+    { "name": "Slot 1", "start": "09:00", "end": "09:50" },
+    { "name": "Slot 2", "start": "09:50", "end": "10:40" },
+    { "name": "Slot 3", "start": "10:40", "end": "11:30" },
+    { "name": "Break", "start": "11:30", "end": "11:50" },
+    { "name": "Slot 4", "start": "11:50", "end": "12:50" },
+    { "name": "Lunch Break", "start": "12:50", "end": "13:40" },
+    { "name": "Slot 6", "start": "13:40", "end": "14:30" },
+    { "name": "Slot 7", "start": "14:30", "end": "15:20" },
+    { "name": "Break", "start": "15:20", "end": "15:40" },
+    { "name": "Slot 8", "start": "15:40", "end": "16:30" }
+  ],
+  "days": {
+    "Monday": [
+      { "slot": "Slot 1", "code": "23MAT204", "name": "Mathematics for Intelligent Systems 3", "room": "E216" },
+      { "slot": "Slot 2", "code": "23LSE201", "name": "Life Skills for Engineers I", "room": "E216" },
+      { "slot": "Slot 3", "code": "23AID206", "name": "Introduction to Computer Networks", "room": "E216" },
+      { "slot": "Slot 4", "code": "23AID206", "name": "Introduction to Computer Networks", "room": "E216" },
+      { "slot": "Slot 6", "code": "23LSE201", "name": "Life Skills for Engineers I", "room": "E216" },
+      { "slot": "Slot 7", "code": "23AID201", "name": "Modelling, Simulation & Analysis", "room": "E216" },
+      { "slot": "Slot 8", "code": "23AID201", "name": "Modelling, Simulation & Analysis", "room": "E216" }
+    ],
+    "Tuesday": [
+      { "slot": "Slot 1", "code": "23AID206", "name": "Introduction to Computer Networks", "room": "E216" },
+      { "slot": "Slot 2", "code": "23AID203", "name": "Software-Defined Communication Systems", "room": "E216" },
+      { "slot": "Slot 3", "code": "23MAT204", "name": "Mathematics for Intelligent Systems 3", "room": "E216" },
+      { "slot": "Slot 4", "code": "23MAT204", "name": "Mathematics for Intelligent Systems 3", "room": "E216" },
+      { "slot": "Slot 6", "code": "23AID204", "name": "Advanced Data Structures & Algorithm Analysis", "room": "E216" },
+      { "slot": "Slot 7", "code": "23AID205", "name": "Introduction to AI and Machine Learning", "room": "E216" },
+      { "slot": "Slot 8", "code": "23AID205", "name": "Introduction to AI and Machine Learning", "room": "E216" }
+    ],
+    "Wednesday": [
+      { "slot": "Slot 1", "code": "23AID205", "name": "Introduction to AI and Machine Learning", "room": "E216" },
+      { "slot": "Slot 2", "code": "23AID201", "name": "Modelling, Simulation & Analysis", "room": "E216" },
+      { "slot": "Slot 3", "code": "23AID203", "name": "Software-Defined Communication Systems", "room": "E216" },
+      { "slot": "Slot 4", "code": "23AID203", "name": "Software-Defined Communication Systems", "room": "E216" },
+      { "slot": "Slot 6", "code": "22ADM201", "name": "Strategic Lessons from Mahabharatha", "room": "E216" },
+      { "slot": "Slot 7", "code": "23AID202", "name": "Introduction to Robotics", "room": "E216" },
+      { "slot": "Slot 8", "code": "Club Activities", "name": "Club Activities", "room": "E216" }
+    ],
+    "Thursday": [
+      { "slot": "Slot 1", "code": "23AID202", "name": "Introduction to Robotics", "room": "E216" },
+      { "slot": "Slot 2", "code": "23AID202", "name": "Introduction to Robotics", "room": "E216" },
+      { "slot": "Slot 3", "code": "23AID204", "name": "Advanced Data Structures & Algorithm Analysis", "room": "E216" },
+      { "slot": "Slot 4", "code": "23AID206", "name": "Introduction to Computer Networks", "room": "E216" },
+      { "slot": "Slot 6", "code": "23AID205", "name": "Introduction to AI and Machine Learning", "room": "E216" },
+      { "slot": "Slot 7", "code": "23MAT204", "name": "Mathematics for Intelligent Systems 3", "room": "E216" },
+      { "slot": "Slot 8", "code": "23LSE201", "name": "Life Skills for Engineers I", "room": "E216" }
+    ],
+    "Friday": [
+      { "slot": "Slot 1", "code": "23AID202", "name": "Introduction to Robotics", "room": "E216" },
+      { "slot": "Slot 2", "code": "23MAT204", "name": "Mathematics for Intelligent Systems 3", "room": "E216" },
+      { "slot": "Slot 3", "code": "23AID204", "name": "Advanced Data Structures & Algorithm Analysis", "room": "E216" },
+      { "slot": "Slot 4", "code": "23AID204", "name": "Advanced Data Structures & Algorithm Analysis", "room": "E216" },
+      { "slot": "Slot 6", "code": "23AID201", "name": "Modelling, Simulation & Analysis", "room": "E216" },
+      { "slot": "Slot 7", "code": "23AID203", "name": "Software-Defined Communication Systems", "room": "E216" },
+      { "slot": "Slot 8", "code": "Student centric activities", "name": "Group discussion / Paper presentation", "room": "E216" }
+    ]
+  }
+}

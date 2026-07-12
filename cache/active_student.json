@@ -1,0 +1,16 @@
+{
+  "student": {
+    "roll_no": "",
+    "name": "",
+    "program": "",
+    "current_semester": ""
+  },
+  "marks": {},
+  "attendance": {
+    "3": []
+  },
+  "_meta": {
+    "username": "nc.ai.u4aid25042",
+    "scraped_at": "2026-07-12T19:48:48.620696Z"
+  }
+}

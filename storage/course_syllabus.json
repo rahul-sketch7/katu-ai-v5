@@ -1,0 +1,167 @@
+{
+  "semesters": {
+    "3": {
+      "courses": [
+        {
+          "code": "23MAT204",
+          "name": "Mathematics for Intelligent Systems 3",
+          "credits": 3,
+          "syllabus": {
+            "unit_1": "Direct methods for convex functions - sparsity inducing penalty functions - Constrained Convex Optimization problems - Krylov subspace - Conjugate gradient method - formulating problems as LP and QP - Lagrangian multiplier method - KKT conditions - support vector machines - solving by packages (CVXOPT) - Introduction to RKS - Introduction to DMD - Tensor and HoSVD - Linear algebra for AI.",
+            "unit_2": "Introduction to PDEs - Formulation and numerical solution methods (Finite difference and Fourier) for PDEs in Physics and Engineering - Computational experiments using Matlab/Excel/Simulink.",
+            "unit_3": "Multivariate Gaussian and weighted least squares - Markov chains - Markov decision Process",
+            "unit_4": "Introduction to quantum computing - Bells inequality - Quantum gates"
+          },
+          "evaluation": {
+            "assignments": "30% (minimum 2)",
+            "quizzes": "20% (minimum 2)",
+            "mid_term": "20%",
+            "end_sem_or_project": "30% (External)"
+          },
+          "textbooks": [
+            "Gilbert Strang, Linear Algebra and Learning from Data, Wellesley, Cambridge press, 2019.",
+            "Gilbert Strang, Differential Equations and Linear Algebra Wellesley, Cambridge press, 2018.",
+            "Stephen Boyd and Lieven Vandenberghe, Introduction to Applied Linear Algebra - Vectors, Matrices, and Least Squares, 2018.",
+            "Bernhardt, Chris. Quantum computing for everyone. Mit Press, 2019. (From pages 71 to 140)."
+          ]
+        },
+        {
+          "code": "23AID201",
+          "name": "Modelling, Simulation & Analysis",
+          "credits": 3,
+          "syllabus": {
+            "unit_1": "Introduction to modelling - Examples of models, Modelling of dynamic systems, Introduction to simulation - Matlab as a simulation tool, Bond graph modelling - Bond graph model and causality, Generation of system equation, Methods of drawing bond graph models - Mechanical systems, Electrical systems. Basic system models - Mechanical systems, Electrical systems, Hydraulic systems, Pneumatic systems, and Thermal systems",
+            "unit_2": "System models - Linearity and nonlinearity in systems, Combined rotary and translator systems, Electro-Mechanical systems, Hydro-mechanical systems, Robotic systems, Dynamic response of 1st and 2nd order systems, Performance measures for 2nd order system, System transfer functions - 1st and 2nd order systems",
+            "unit_3": "Block diagram algebra, Signal flow graphs, State variable formulation, Frequency response, Bode plot, Simulation using Matlab, Simulation of - simple and compound pendulums, planar mechanisms, and wheeled mobile robots, Validation and verification of simulation models, Parameter estimation methods, Parameter estimation examples, System identification, Introduction to optimization, Optimization with modeling engineering problems."
+          },
+          "evaluation": {
+            "assignments": "30% (minimum 2)",
+            "quizzes": "20% (minimum 2)",
+            "mid_term": "20%",
+            "end_sem_or_project": "30% (External)"
+          },
+          "textbooks": [
+            "Borutzky, Wolfgang, Bond Graph Modelling of Engineering Systems, Springer, 2011.",
+            "Esfandiari, Ramin S. and Bei Lu, Modeling and Analysis of Dynamic Systems, CRC Press, 2010.",
+            "Gardner, John F., Bohdan T. Kulakowski, and J. Lowen Shearer. Dynamic Modeling and Control of Engineering Systems. Publisher: Cambridge University Press; 3rd edition (2008).",
+            "Karnopp, Dean C., Donald L. Margolis, and Ronald C. Rosenberg. System Dynamics: Modeling, Simulation, and Control of Mechatronic Systems. Publisher: Wiley; 5th edition (2012).",
+            "Lennart, L. and Torkel, G., Modeling of Dynamic Systems, Prentice Hall, 1994.",
+            "Woods, Robert L. and Kent L. Lawrence. Modeling and Simulation of Dynamic Systems. Publisher: Prentice Hall; 1st edition (1997)."
+          ]
+        },
+        {
+          "code": "23AID202",
+          "name": "Introduction to Robotics",
+          "credits": 3,
+          "syllabus": {
+            "unit_1": "Overview of Robotics: Definition and History of Robots, Applications of robots, Current trend in robotics, Basic mathematics for robotics - Vectors, Matrices and Linear Algebra concepts, Rigid body transformations - Translation and Rotation, Homogeneous Transformation matrix.",
+            "unit_2": "Kinematics of Simple Robotic Systems: Forward Kinematics of simple industrial robotic systems, Inverse kinematics of simple industrial robotic systems, Differential Kinematics of simple industrial robotic systems, Kinematics of simple wheeled mobile robots.",
+            "unit_3": "Dynamics and Control of Simple Robotic Systems: Introduction to rigid body kinetics, Euler-Lagrange equation of simple robotic systems, Forward and Inverse dynamics of simple robotic systems, Velocity based control of simple robotic systems, Torque based control of robotic systems."
+          },
+          "evaluation": {
+            "assignments": "30% (minimum 2)",
+            "quizzes": "20% (minimum 2)",
+            "mid_term": "20%",
+            "end_sem_or_project": "30% (External)"
+          },
+          "textbooks": [
+            "Corke P. Robotics, Vision and Control. Springer; 2017.",
+            "Craig J J. Introduction to Robotics: Mechanics and Control. Pearson Publishing, 2017.",
+            "Spong M.W., Hutchinson S. and Vidyasagar M, Robot Modeling and Control, Wiley, 2006",
+            "Saha S K, Introduction to Robotics, McGraw Hill publishing, 2014"
+          ]
+        },
+        {
+          "code": "23AID203",
+          "name": "Software-Defined Communication Systems",
+          "credits": 3,
+          "syllabus": {
+            "unit_1": "Introduction to communication systems, introduction to signals, different types of signals and their characteristics, concept of system, linear time-invariant (LTI) system, sinusoids- concept of frequency, in-phase and quadrature component, bandwidth, pass band and stop band, Introduction to SDR platforms and devices- MATLAB Simulink and GNU radio Companion (GRC), RTL-SDR and Adalm Pluto. Signal analysis/ spectrum analysis and visualization using SDR tools.",
+            "unit_2": "Need for modulation, analog modulation schemes, amplitude modulation (AM) and its types - AM-DSB-SC, AM-DSB-TC, SSB. AM Demodulation schemes, angle modulation- frequency modulation (FM) -Narrowband and wideband, phase modulation, FM demodulation, implementation of analog modulation/demodulation schemes using SDR tools.",
+            "unit_3": "Quadrature amplitude modulation and demodulation, pulse analog modulation schemes, digital carrier modulation/demodulation Schemes- amplitude shift keying (ASK), frequency shift keying (FSK), phase shift keying (PSK), M-ary signalling, BPSK, QPSK, implementation of digital modulation/demodulation schemes using SDR tools. Multicarrier modulation- OFDM, MIMO, Prospects of AI in communication system- radio signal or modulation classification."
+          },
+          "evaluation": {
+            "assignments": "30% (minimum 3)",
+            "quizzes": "20% (minimum 2)",
+            "mid_term": "20%",
+            "end_sem_or_project": "20% (External)"
+          },
+          "textbooks": [
+            "Wyglinski, Alexander M., Robin Getz, Travis Collins, and Di Pu. Software-defined radio for engineers. Artech House, 2018.",
+            "Qasim Chaudhari, Wireless Communications from the Ground Up: An SDR Perspective, 2018",
+            "Andrew Barron, Software Defined Radio: for Amateur Radio Operators and Shortwave Listeners, 2019",
+            "C.R. Johnson and W.A. Sethares, Software Receiver Design: Build Your Own Digital Communication System in Five Easy Steps, Cambridge University Press, 2011",
+            "Proakis, John G., Masoud Salehi, and Gerhard Bauch. Contemporary communication systems using MATLAB. Cengage Learning, 2012.",
+            "Wyglinski, Alexander M., and Di Pu. Digital communication systems engineering with software-defined radio. Artech House, 2013."
+          ]
+        },
+        {
+          "code": "23AID204",
+          "name": "Advanced Data Structures & Algorithm Analysis",
+          "credits": 3,
+          "syllabus": {
+            "unit_1": "Full binary tree, complete binary tree, perfect binary tree, balanced binary tree, binary search tree, properties and functions",
+            "unit_2": "Binary Heap Data Structure-Heap property, properties and functions, Heapsort, AVL Tree - balance factor, rotating the subtrees in an AVL tree - right rotation, left rotations, left-right and right-left rotate, operations on AVL trees - insertion and deletion",
+            "unit_3": "Trie data structure - basic operations, simple problems, Hashing and Hash Tables - hash functions, collision, collision avoidance methods, Merkel trees",
+            "unit_4": "Fundamentals of the Analysis of Algorithmic Efficiency - Asymptotic Notations and growth rate - Empirical Analysis - Divide and Conquer Methodology - Dynamic programming - Knapsack Problem and Memory functions. Greedy Technique - Iterative methods - Backtracking - Branch and Bound"
+          },
+          "evaluation": {
+            "assignments": "30% (minimum 2)",
+            "quizzes": "20% (minimum 2)",
+            "mid_term": "20%",
+            "end_sem_or_project": "30% (External)"
+          },
+          "textbooks": [
+            "Mehlhorn, Kurt, Peter Sanders, and Peter Sanders. Algorithms and data structures: The basic toolbox. Vol. 55. Berlin: Springer, 2008.",
+            "Bhim P Upadhyaya, Data Structures and Algorithms with Scala. Springer International Publishing, 2019.",
+            "Aho, Alfred V. Data Structures and Algorithms, Addison-Wesley. Reading, Mass. (1983).",
+            "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. 2009. Introduction to Algorithms, Third Edition (3rd ed.). The MIT Press",
+            "Jeffrey McConnell, Analysis of algorithms. Jones & Bartlett Publishers, 2nd Revised edition, 2007",
+            "Anany Levitin, Introduction to the Design and Analysis of Algorithms, Third Edition, Pearson Education, 2012"
+          ]
+        },
+        {
+          "code": "23AID205",
+          "name": "Introduction to AI and Machine Learning",
+          "credits": 3,
+          "syllabus": {
+            "unit_1": "History and Foundations of AI and Data Science, Applications of AI and Data Science, Career paths pertinent to AI and Data Science",
+            "unit_2": "Rational Intelligent Agents, Agents and Environments, Nature of Environments, Structure of Agents. Introduction - Overview of Data Science - Introduction to Statistics: Sampling, Sample Means and Sample Sizes - Descriptive statistics: Central tendency, dispersion, variance, covariance, kurtosis, five-point summary",
+            "unit_3": "Basic tools for AI and Data Science, Introduction to Data Science process pipeline, Different representations of Data, Importance of pre-processing the data, Elementary Applications of AI and Data Science"
+          },
+          "evaluation": {
+            "assignments": "30% (minimum 2)",
+            "quizzes": "20% (minimum 2)",
+            "mid_term": "20%",
+            "end_sem_or_project": "30% (External)"
+          },
+          "textbooks": [
+            "Russell, Stuart Jonathan, Norvig, Peter, Davis, Ernest. Artificial Intelligence: A Modern Approach. United Kingdom: Pearson, 2010.",
+            "Deepak Khemani. A First Course in Artificial Intelligence. McGraw Hill Education (India), 2013.",
+            "Denis Rothman. Artificial Intelligence by Example, Packt, 2018."
+          ]
+        },
+        {
+          "code": "23AID206",
+          "name": "Introduction to Computer Networks",
+          "credits": 3,
+          "syllabus": {
+            "unit_1": "Basic concepts of computer networks, Internet - network edge, network core, delay, loss, and throughput in packet switched networks, network topology, types of networks, Internet standards and organization. OSI layer stack, protocols in the context of the Internet protocol stack. Introduction to AI powered networks that monitor the connected devices and their bandwidth requirements",
+            "unit_2": "Application Layer - Protocols in Web and Email applications, Peer-to-Peer Applications. Transport Layer - connection-oriented and connectionless service, protocols, and socket programming. Network Layer - Internet Protocol, Host Addressing for subnets, Routing and Forwarding principles. Data link and Physical layer concepts for wired and wireless network",
+            "unit_3": "Network security - analyze the network traffic. Introduction to Software Define Networks"
+          },
+          "evaluation": {
+            "assignments": "30% (minimum 2)",
+            "quizzes": "20% (minimum 2)",
+            "mid_term": "20%",
+            "end_sem_or_project": "30% (External)"
+          },
+          "textbooks": [
+            "Kurose, James F. Computer networking: A top-down approach featuring the internet, 3/E. Pearson Education India, 2005.",
+            "Andrew, S. Tanenbaum - Computer Networks - Prentice Hall. New Jersey (2003)."
+          ]
+        }
+      ]
+    }
+  }
+}
