@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+cache/active_student.json
+cache/*_data.json
+logs/*.log
+.nitrostudio/compose-progress.json
+.DS_Store
+Thumbs.db
